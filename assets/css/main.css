@@ -1,0 +1,179 @@
+/*-------- RESET -------*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*-------- SETTING -------*/
+@font-face {
+  font-family: Lobster;
+  src: url(../font/UVF_Lobster12.ttf);
+}
+@font-face {
+  font-family: Lubalin;
+  src: url(../font/VNF-ITC_Lubalin_Graph_Regular.ttf);
+}
+@font-face {
+  font-family: Aquarelle;
+  src: url(../font/UTM_Aquarelle.ttf);
+}
+@font-face {
+  font-family: Didot;
+  src: url(../font/UVF_Didot.ttf);
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #818181;
+  background: #ffffff;
+}
+
+body a {
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+body ul li {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+  vertical-align: middle;
+  border-style: none;
+}
+
+.header__top {
+  background-color: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
+  font-size: 1.2rem;
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  padding: 0.8rem 0;
+}
+.header__top .row {
+  justify-content: space-between;
+}
+.header__top__menu ul {
+  display: flex;
+  justify-content: flex-start;
+}
+.header__top__menu ul li:not(:last-child)::after {
+  content: "-";
+  padding: 0 1rem;
+  color: #ffffff;
+}
+.header__top__menu ul a {
+  color: #ffffff;
+  transition: all 0.3s;
+}
+.header__top__menu ul a:hover {
+  border-bottom: 1px solid #dfa949;
+  color: #dfa949;
+}
+.header__top__search input {
+  color: #ffffff;
+  font-style: italic;
+  background-color: transparent;
+  border: none;
+  border-left: 1px solid white;
+  padding-left: 1rem;
+  width: 22rem;
+}
+.header__top__search input:focus {
+  outline: none;
+}
+
+.container {
+  max-width: 1170px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.row {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    max-width: 990px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .container {
+    max-width: 750px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 570px;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
