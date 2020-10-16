@@ -1,20 +1,116 @@
-$primary-color: #dfa949; 
-
-$text-gray-0: #d6d6d6;
-$text-gray-1: #818181;
-$text-white: #ffffff;
-
-$bg-black: #000000;
-$bg-gray: #252525;
-
-$font-color:  #818181;
+// COLOR
 $bg-color: #ffffff;
+$color-primary: #818181;
+$color-hover: #dfa949;
+$color-white: #ffffff;
+$color-white-1: #ababab;
+$color-black: #000000;
+$color-black-1: #252525;
+$color-red: red;
+$color-transparent: #ffffff1a;
+$color-header-top: #d6d6d6;
+$color-blog-hover: rgba(255, 255, 255, 0.2);
+$color-detail-main-right-quantity: #e6e6e6;
+$color-detail-main-right-social-fb: #4a67b7;
+$color-detail-main-right-social-tw: #00acee;
+$color-detail-main-right-social-gg: #dd4b38;
+$color-detail-main-right-social-in: #0077b5;
+$color-detail-main-right-social-pi: #be1526;
+$color-detail-main-right-social-bg: #ececec;
+$color-border: #e6e6e6;
+$color-blog-detail-tag-hover: #f26522;
+$color-blog-detail-video-circle: rgba(0, 0, 0, 0.5);
+$color-blog-detail-comment-title: #eeeeee;
+$color-order-bg: #fafafa;
+$color-address-button: #24c5d9;
+$color-contact-bg: #fafafa;
+$color-modal-bg: rgba(255, 255, 255, 0.5);
+$color-modal-close: #e6e6e6;
+$color-payment-bg: #dadadab9;
+
+
+// FONT SIZE
+$font-size-primary: 12px;
+$font-size-header-top-menu: 14px;
+$font-size-header-main-menu-list-item: 13px;
+$font-size-header-main-menu-list-icon: 18px;
+$font-size-header-main-menu-sub: 14px;
+$font-size-footer-title: 18px;
+$font-size-footer-email: 14px;
+$font-size-footer-contact: 14px;
+$font-size-index-time-box-num: 34px;
+$font-size-index-time-box-text: 14px;
+$font-size-index-corner-big: 32px;
+$font-size-index-corner-small: 16px;
+$font-size-index-sale-content: 13px;
+$font-size-index-images: 60px;
+$font-size-index-customer: 14px;
+$font-size-index-intro-content: 16px;
+$font-size-product-title: 14px;
+$font-size-product-price: 21px;
+$font-size-product-price-old: 14px;
+$font-size-product-compare: 14px;
+$font-size-title-main: 21px;
+$font-size-title-product: 25px;
+$font-size-title-product-small: 16px;
+$font-size-price-product: 34px;
+$font-size-slide-arrow: 15px;
+$font-size-blog-link: 16px;
+$font-size-blog-title: 18px;
+$font-size-blog-content: 14px;
+$font-size-detail-link: 14px;
+$font-size-detail-title: 16px;
+$font-size-detail-compare: 14px;
+$font-size-detail-description: 14px;
+$font-size-detail-social-text: 12px;
+$font-size-detail-content-right: 44px;
+$font-size-products-content-left-list: 14px;
+$font-size-products-content-right-pag-left: 14px;
+$font-size-products-list-right-content: 13px;
+$font-size-products-list-right-add: 14px;
+$font-size-cart-menu: 14px;
+$font-size-cart-list-name: 13px;
+$font-size-cart-list-price: 16px;
+$font-size-cart-sum-title: 25px;
+$font-size-cart-sum-price: 25px;
+$font-size-intro-content-right-title: 24px;
+$font-size-intro-content-right-content: 14px;
+$font-size-blog-detail-title: 18px;
+$font-size-blog-detail-content-left-newest-title: 12px;
+$font-size-blog-detail-content-left-newest-time: 13px;
+$font-size-blog-detail-content-left-tag: 12px;
+$font-size-blog-detail-content-left-video: 16px;
+$font-size-blog-detail-content-right-title: 30px;
+$font-size-blog-detail-content-right-time: 21px;
+$font-size-blog-detail-content-right-content: 19px;
+$font-size-blog-detail-opinion-form-textinput: 14px;
+$font-size-blog-detail-opinion-form-button: 16px;
+$font-size-blog-detail-comment: 14px;
+$font-size-blog-detail-page: 14px;
+$font-size-button-big: 14px;
+$font-size-login-title: 18px;
+$font-size-login-content: 14px;
+$font-size-order-title: 16px;
+$font-size-order-content: 14px;
+$font-size-address-button: 16px;
+$font-size-address-title: 18px;
+$font-size-address-content: 16px;
+$font-size-contact-title: 18px;
+$font-size-contact-content: 14px;
+$font-size-contact-social: 20px;
+$font-size-error-content: 16px;
+$font-size-modal-close: 40px;
+$font-size-modal-title: 36px;
+$font-size-modal-content: 16px;
+$font-size-progress-bar: 20px;
+$font-size-payment-title: 16px;
+$font-size-payment-content: 16px;
+
+
+$z-index-header-top-menu: 999;
 
 //break points
-$breakpoints:(
-    'extra-large':1200px,
-    'small-large': 1035px,
-    'large':992px,
-    'medium':768px,
-    'small':576px,
-)
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;

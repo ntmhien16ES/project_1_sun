@@ -1,25 +1,26 @@
-.container {
-    max-width: 1200px;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-}
-.row {
-    @include flex(row, flex-start, center, wrap);
-}
-@include responsive("extra-large") {
-    .container {
-        max-width: 960px;
-    }
-}
-@include responsive("large") {
-    .container {
-        max-width: 720px;
-    }
-}
-@include responsive("medium") {
-    .container {
+.container, .wrapper {
+    width: 100%;
+    @include pl-pr(15px, 15px);
+    @include ml-mr(auto, auto);
+    @include sm {
         max-width: 540px;
     }
+    @include md {
+        max-width: 720px;
+    }
+    @include lg {
+        max-width: 960px;
+    }
+    @include xl {
+        max-width: 1170px
+    }
+}
+.row {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-right: -15px;
+    margin-left: -15px;
 }

@@ -1,22 +1,13 @@
 /*-------- SETTING -------*/
-@font-face {
-    font-family: Lobster;
-    src: url(../font/UVF_Lobster12.ttf);
-}
-@font-face {
-    font-family: Lubalin;
-    src: url(../font/VNF-ITC_Lubalin_Graph_Regular.ttf);
-}
-@font-face {
-    font-family: Aquarelle;
-    src: url(../font/UTM_Aquarelle.ttf);
-}
-@font-face {
-    font-family: Didot;
-    src: url(../font/UVF_Didot.ttf);
-}
+@include font-face(Lobster, UVF_Lobster12);
+@include font-face(Lubalin, VNF-ITC_Lubalin_Graph_Regular);
+@include font-face(Aquarelle, UTM_Aquarelle);
+@include font-face(Didot, UVF_Didot);
+
 *, *::before, *::after {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 html {
     scroll-behavior: smooth;
@@ -24,53 +15,45 @@ html {
 }
 body {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 1.4rem;
+    font-size: $font-size-primary;
     font-weight: 400;
     line-height: 1.5;
-    color: $font-color;
+    color: $color-primary;
     background: $bg-color;
 }
-body a {
-    text-decoration: none;
-    transition: all .3s;
+li {
+    float: left;
+    list-style-type: none;
 }
-body ul li{
-    list-style: none;
+a { 
+    text-decoration: none;
+  
+    &:hover {
+      color: $color-hover !important;
+    }
+}
+i {
+    &:hover {
+      color: $color-hover !important;
+    }
+}
+input {
+    font-family: inherit;
+    font-size: inherit;
+    outline: none;
+}
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    @include transition;
+}
+hr{
+    opacity: 0.3
 }
 img {
     width: 100%;
     object-fit: cover;
     vertical-align: middle;
     border-style: none;
-}
-.container {
-    max-width: 1170px;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-}
-.row {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-wrap: wrap;
-    flex-direction: row;
-    margin-right: -15px;
-    margin-left: -15px;
-}
-@include responsive("extra-large") {
-    .container {
-        max-width: 990px;
-    }
-}
-@include responsive("large") {
-    .container {
-        max-width: 750px;
-    }
-}
-@include responsive("medium") {
-    .container {
-        max-width: 570px;
-    }
 }

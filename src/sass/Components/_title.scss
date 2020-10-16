@@ -1,19 +1,41 @@
-.big-title {
-    @extend %big-title;
-}
-.sub-title {
-    @extend %sub-title;
-}
-@include responsive("large") {
-    .big-title {
-        font-size: 3.5rem;
+.title-main {
+    p {
+        @include mt-mb(0, 10px);
+        color: initial;
+        font-size: $font-size-title-main;
+        text-align: center;
+        letter-spacing: 4px;
+    }
+    img {
+        width: 190px;
     }
 }
-@include responsive("medium") {
-    .sub-title {
-        font-size: 1.4rem;
+.title-product {
+    p {
+        color: initial;
+        font-size: 20px;
+        @include lg {
+            font-size: $font-size-title-product;
+        }
     }
-    .big-title {
-        font-size: 3.2rem;
+    img {
+        width: 65px;
+        @include mt-mb(5px, 0);
+    }
+}
+.title-product-small {
+    p {
+        color: initial;
+        font-size: $font-size-title-product-small;
+        letter-spacing: 3px;
+    }
+    img {
+        @include mt-mb(8px, 0);
+    }
+}
+.detail-title {
+    p {
+      color: $color-primary;
+      font-size: $font-size-detail-title;
     }
 }

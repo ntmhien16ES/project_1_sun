@@ -1,7 +1,7 @@
 // Helpers
 @import "./Helpers/variable";
-@import "./Helpers/placeholders";
 @import "./Helpers/mixin";
+@import "./Helpers/placeholders";
 
 // Base
 @import "./Base/reset";
@@ -13,8 +13,13 @@
 
 // Components
 @import "./Components/layout";
-@import "./Components/title";
 @import "./Components/button";
+@import "./Components/blog";
+@import "./Components/corner";
+@import "./Components/input";
+@import "./Components/link";
+@import "./Components/product";
+@import "./Components/title";
 
 // Pages
 @import "./Pages/index";
