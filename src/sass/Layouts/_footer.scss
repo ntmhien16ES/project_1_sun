@@ -1,0 +1,100 @@
+.footer {
+    &__top {
+        padding: 9.6rem 0;
+        background-color: $footer-bg;
+        .row {
+            align-items: flex-start;
+        }
+        h6 {
+            @include text(white, 2.4rem, 2.6rem, 700);
+            text-transform: capitalize;
+            margin-bottom: 2.5rem;
+        }
+        li {
+            margin-bottom: 1.4rem;
+            a {
+                @include text(#6e747b, 1.6rem, 2.6rem);
+            }
+        }
+        .footer__about {
+            width: (4/12)*100%;
+            p {
+                color: #ababab;
+                padding-right: 4.8rem;
+            }
+            .footer__icon {
+                margin-top: 2.4rem;
+                i {
+                    @include text(white, 1.4rem,3.5rem);
+                    display: inline-block;
+                    @include size(3.5rem);
+                    @include border-radius(50%);
+                    text-align: center;
+                    background-color: $footer-light;
+                    margin-right: 1rem;
+                }
+            }
+        }
+        .footer__link {
+            width: (2/12)*100%;
+        }
+        .footer__services {
+            width: (3/12)*100%;
+        }
+        .footer__contact {
+            width: (3/12)*100%;
+            li {
+                i {
+                    display: inline-block;
+                    color: #eee;
+                    width: 2.5rem;
+                }
+            }
+        }
+        @include responsive('large') {
+            padding: 4.8rem 0;
+            .h6 {
+                font-size: 2rem;
+            }
+            .footer__about {
+                width: 100%;
+            }
+            .footer__link {
+                width: 50%;
+                margin: 4.8rem 0;
+            }
+            .footer__services {
+                width: 50%;
+                margin: 4.8rem 0;
+            }
+            .footer__contact {
+                width: 100%;
+            }
+        }
+        @include responsive('medium') {
+            .footer__link {
+                width: 100%;
+                margin: 4.8rem 0 0;
+            }
+            .footer__services {
+                width: 50%;
+                margin: 4.8rem 0;
+            }
+            .footer__contact {
+                width: 100%;
+            }
+        }
+    }
+
+    &__bottom {
+        background-color: $footer-light;
+        padding: 2rem 0;
+        p {
+            @include text(#6e747b, 1.6rem);
+            text-align: center;
+            a {
+                color: white;
+            }
+        }
+    }
+}
