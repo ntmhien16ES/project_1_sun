@@ -1,0 +1,25 @@
+.container {
+    max-width: 1200px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.row {
+    @include flex(row, flex-start, center, wrap);
+}
+@include responsive("extra-large") {
+    .container {
+        max-width: 960px;
+    }
+}
+@include responsive("large") {
+    .container {
+        max-width: 720px;
+    }
+}
+@include responsive("medium") {
+    .container {
+        max-width: 540px;
+    }
+}

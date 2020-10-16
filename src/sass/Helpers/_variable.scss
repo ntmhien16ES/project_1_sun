@@ -1,0 +1,20 @@
+$primary-color: #dfa949; 
+
+$text-gray-0: #d6d6d6;
+$text-gray-1: #818181;
+$text-white: #ffffff;
+
+$bg-black: #000000;
+$bg-gray: #252525;
+
+$font-color:  #818181;
+$bg-color: #ffffff;
+
+//break points
+$breakpoints:(
+    'extra-large':1200px,
+    'small-large': 1035px,
+    'large':992px,
+    'medium':768px,
+    'small':576px,
+)
