@@ -1,0 +1,324 @@
+.index {
+    background: url("../images/index-bg-left.png") left top no-repeat, url("../images/index-bg-right.png") right top no-repeat;
+    background-size: 25%, 10%;
+  
+    &__intro {
+        @include pt-pb(100px, 0);
+        
+        .wrapper {
+            @include grid(12, 30px);
+            
+            .index__intro__container {
+                grid-column: 2/12;
+                text-align: center;
+                    
+                .index__intro__content {
+                    @include mt-mb(25px, 0);
+        
+                    p {
+                        color: $color-primary;
+                        font-size: $font-size-index-intro-content;
+                    }
+                } 
+                .index__intro__more {
+                    @include mt-mb(35px, 0);
+                }  
+            }
+            
+        }
+    }
+    &__sale {
+        @include mt-mb(104px, 0);
+  
+        .wrapper {
+            .index__sale__container {
+                position: relative;
+        
+                & > img {
+                    width: 100%
+                }
+        
+                .index__sale__product {
+                    @include grid(12, 30px);
+        
+                    .index__sale__product--wrapper {
+                        margin-top: -220px;
+                        grid-column: 2/12;
+                        @include grid(10, 30px);
+                        @include pt-pb(60px, 60px);
+                        @include md {
+                            @include pt-pb(50px, 50px);
+                            margin-top: -320px;
+                        }
+                        @include lg {
+                            @include pt-pb(95px, 95px);
+                            grid-column: 2/12;
+                            margin-top: -370px;
+                        }
+                        
+                        background-color: $color-white;
+            
+                        .index__sale__item {
+                            position: relative;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            overflow: hidden;
+                            grid-column: 2/7;
+                            img {
+                                margin-top: 60px;
+                                width: 150px;
+                                @include md {
+                                    width: 200px;
+                                }
+                            }
+                        }
+            
+                        .index__sale__detail {
+                            grid-column: 7/10;
+                            
+                            .index__detail__price {
+                                @include mt-mb(10px, 0);
+                                @include lg {
+                                    @include mt-mb(25px, 0);
+                                }
+                            }
+                            .index__detail__button {
+                                @include mt-mb(10px, 20px);
+                                @include lg {
+                                    @include mt-mb(30px, 25px);
+                                }
+                                .button-add-to-cart {
+                                    button {
+                                        font-size: 10px;
+                                        width: 90px;
+                                        height: 29px;
+                                        @include md {
+                                            width: 122px;
+                                            height: 29px;
+                                            font-size: 14px;
+                                        }
+                                    }
+                                }
+                                
+                            }
+                            .index__detail__content {
+                                
+                                @include mt-mb(0, 0);
+                                p {
+                                    font-size: $font-size-index-sale-content;
+                                }
+                                display: none;
+                                @include md{
+                                    display: block;
+                                }
+                            }
+                            .index__detail__time {
+                                @include grid(2, 0);
+                                @include mt-mb(25px, 0);
+                
+                                .index__time__box {
+                                    border: 0.5px solid $color-hover;
+                                    text-align: center;
+                                    p {
+                                        color: $color-hover;
+                                        &:first-child {
+                                            @include pt-pb(5px, 0);
+                                            font-family: utm-caviar;
+                                            font-size: $font-size-index-time-box-num;
+                                            @include lg {
+                                                @include pt-pb(10px, 0);
+                                            }
+                                        }
+                                        &:last-child {
+                                            @include pt-pb(0px, 10px);
+                                            font-size: $font-size-index-time-box-text;
+                                            @include lg {
+                                                @include pt-pb(5px, 15px);
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }  
+                } 
+            }
+        }
+    }
+    &__new-products {
+        @include mt-mb(65px, 0);
+        @include md {
+            @include mt-mb(75px, 0);
+        }
+        @include lg {
+            @include mt-mb(85px, 0);
+        }
+        @include xl {
+            @include mt-mb(95px, 0);
+        }
+        .wrapper {
+            .index__new-products__container {
+                text-align: center;
+        
+                .index__new-products__slide {
+                    position: relative;
+                    @include mt-mb(45px, 0);
+                    input {
+                        position: absolute;
+                        visibility: hidden;
+                    }
+                    .index__slide__full-images--hidden {
+                        overflow: hidden;
+            
+                        .index__slide__full-images {
+                            display: flex;
+                            width:  400%;
+                            @include md {
+                                width: 200%;
+                            }
+                            
+
+                            transform: translateX(0%);
+                            @include transition;
+                            .product {
+                                @extend %product-slide
+                            }
+                        }
+                    }
+            
+                    #index-new-products-1:checked ~ .index__slide__full-images--hidden .index__slide__full-images {
+                        transform: translateX(0%);
+                    }
+                    #index-new-products-2:checked ~ .index__slide__full-images--hidden .index__slide__full-images {
+                        transform: translateX(-25%);
+                        @include md {
+                            transform: translateX(-50%);
+                        }
+                    }
+                    .index__slide__arrow {
+                        &--left {
+                            position: absolute;
+                            top: 50%;
+                            left: -15px;
+                        }
+                        &--right {
+                            position: absolute;
+                            top: 50%;
+                            right: -15px;
+                        }
+                        &--left, &--right {
+                            i {
+                                color: $color-hover;
+                                font-size: $font-size-slide-arrow;
+                                cursor: pointer;
+                            }
+                        } 
+                    } 
+                }
+            }
+        }
+    }
+    &__images {
+        @include grid(2, 0);
+        @include md {
+            @include grid(4, 0);
+        }
+        @include mt-mb(100px, 0);
+        
+        &__item {
+            position: relative;
+            overflow: hidden;
+            &:hover {
+                img {
+                    transform: scale(1.1);
+                    opacity: 0.8;
+                }
+                .index__item__hover {
+                    p {
+                        @include xl {
+                            visibility: visible;
+                            opacity: 1;
+                        }
+            
+                        &:last-of-type {
+                            &::before {
+                                opacity: 1;
+                                transform: scale(1);
+                            }
+                            &::after {
+                                opacity: 1;
+                                transform: scale(1);
+                            }
+                        }  
+                    } 
+                }  
+            }
+            img {
+                width: 100%;
+                transform: scale(1);
+                @include transition;
+            }
+            .index__item__hover {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+        
+                p {
+                    visibility: hidden;
+                    opacity: 0;
+                    color: $color-white;
+                    letter-spacing: 7px;
+                    @include transition;
+            
+                    &:first-of-type {
+                        @include mt-mb(44px, 0);
+                        font-size: $font-size-primary;
+                        line-height: 35px;
+                    }
+                    &:last-of-type {
+                        @include mt-mb(-8px, 0);
+                        font-size: $font-size-index-images;
+                        margin-left: 10px;
+            
+                        &::before {
+                            top: 35%;
+                            right: 10%;
+                            bottom: 25%;
+                            left: 10%;
+                            border-top: 1px solid $color-white;
+                            border-bottom: 1px solid $color-white;
+                            transform: scale(0,1);
+                            @extend %index-images-before-after;
+                        }
+                        &::after {
+                            top: 27%;
+                            right: 15%;
+                            bottom: 17%;
+                            left: 15%;
+                            border-left: 1px solid $color-white;
+                            border-right: 1px solid $color-white;
+                            transform: scale(1,0);
+                            @extend %index-images-before-after;
+                        }
+                    }
+                }
+                
+                a {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+            
+                    &:hover {
+                        border: 4px solid $color-hover;
+                    }
+                } 
+            }    
+        }      
+    }
+}

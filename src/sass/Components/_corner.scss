@@ -1,0 +1,64 @@
+.corner-big {
+    .corner {
+        position: absolute;
+        top: -86px;
+        left: -86px;
+        width: 162px;
+        height: 162px;
+        background-color: $color-hover;
+        transform: rotate(-45deg);
+
+        p {
+            @include pt-pb(113px, 0);
+            color: $color-white;
+            font-size: $font-size-index-corner-big;
+            text-align: center;
+            @include md {
+                @include pt-pb(125px, 0);
+            }
+        }
+        @include md {
+            width: 172px;
+            height: 172px;
+        }
+    }
+    .underline {
+        position: absolute;
+        top: -92px;
+        left: -92px;
+        width: 174px;
+        height: 174px;
+        border: 1px solid $color-hover;
+        transform: rotate(-45deg);
+        @include md {
+            width: 184px;
+            height: 184px;
+        }
+    }
+}
+.corner-small {
+    .corner {
+        position: absolute;
+        top: -41px;
+        left: -41px;
+        width: 82px;
+        height: 82px;
+        background-color: inherit;
+        transform: rotate(-45deg);
+
+        p {
+            @include pt-pb(60px, 0);
+            color: $color-white;
+            font-size: $font-size-index-corner-small;
+        }
+    }
+    .underline {
+        position: absolute;
+        top: -44px;
+        left: -44px;
+        width: 88px;
+        height: 88px;
+        border: 1px solid;
+        transform: rotate(-45deg);
+    }
+}

@@ -1,0 +1,24 @@
+.input-text, .textarea-text {
+    display: flex;
+}
+.input-checkbox {
+    input {
+        position: relative;
+        visibility: hidden;
+
+        &::after {
+        position: absolute;
+        visibility: visible;
+        content: "";
+        top: 25%;
+        left: 0;
+        width: 6px;
+        height: 6px;
+        border: 1px solid $color-border;
+        background-color: $color-border;
+        }
+        &:checked::after {
+        background-color: $color-hover;
+        }
+    }
+}

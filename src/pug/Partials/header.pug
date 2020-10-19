@@ -1,3 +1,8 @@
-header.header
-    //- HEADER TOP
-    include ./header__top.pug
+header
+    block header_top
+        .header__top
+            .header__top--relative
+                include ./header_top
+    block header_slider
+    block header_menu
+        include ./header_menu

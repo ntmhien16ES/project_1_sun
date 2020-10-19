@@ -1,0 +1,45 @@
+.button-small {
+    button {
+        height: 29px;
+        @include pl-pr(18px, 18px);
+        @extend %button-small;
+
+        &:hover {
+        background-color: $color-hover !important;
+        }
+    }
+}
+.button-big {
+    button {
+        height: 45px;
+        @include pl-pr(45px, 45px);
+        @extend %button-big;
+
+        &:hover {
+        background-color: $color-hover;
+        }
+    }
+}
+.button-address {
+    button {
+        height: 37px;
+        @include pl-pr(18px, 18px);
+        @extend %button-address;
+
+        &:hover {
+        background-color: $color-hover !important;
+        }
+    }
+}
+.button-add-to-cart {
+    button {
+        width: 122px;
+        height: 29px;
+        letter-spacing: 1px;
+        @extend %button-small;
+
+        &:hover {
+        background-color: $color-hover;
+        }
+    }
+}

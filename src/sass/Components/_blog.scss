@@ -1,0 +1,104 @@
+.blog-item {
+    &__image {
+        position: relative;
+
+        img {
+            width: 100%;
+        }
+
+        &:hover {
+            .blog-item__image__hover {
+                .blog-item__hover__bg,
+                .blog-item__hover__icon i {
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+        }
+        .blog-item__image__hover {
+            .blog-item__hover__bg {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                visibility: hidden;
+                opacity: 0;
+                background: linear-gradient(
+                    to bottom right,
+                    transparent 50%,
+                    $color-blog-hover 50%
+                );
+                @include transition;
+            }
+            .blog-item__hover__icon {
+                i {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    visibility: hidden;
+                    opacity: 0;
+                    @include pl-pr(10px, 10px);
+                    @include pt-pb(10px, 10px);
+                    border-radius: 50%;
+                    background-color: $color-white;
+                    color: $color-black;
+                    font-size: $font-size-blog-link;
+                    transform: translate(-50%, -50%);
+                    @include transition;
+                }
+            }
+            a {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    &__title {
+        @include mt-mb(20px, 0);
+
+        a {
+            color: $color-black;
+            font-size: $font-size-blog-title;
+            text-transform: uppercase;
+            @include transition;
+        }
+    }
+    &__time {
+        @include mt-mb(10px, 0);
+
+        p {
+            font-size: $font-size-primary;
+            color: $color-primary;
+            opacity: 0.5;
+        }
+    }
+    &__content {
+        @include mt-mb(10px, 0);
+
+        p {
+            font-size: $font-size-blog-content;
+            color: $color-primary;
+        }
+    }
+    &__read-more {
+        @include mt-mb(5px, 0);
+
+        a {
+            font-size: $font-size-blog-content;
+            color: $color-primary;
+            opacity: 0.5;
+            @include transition;
+        }
+    }
+}
+.blog-detail__left__title {
+    p {
+      color: $color-black;
+      font-family: "Roboto";
+      font-size: $font-size-blog-detail-title;
+    }
+}
