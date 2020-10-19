@@ -5,21 +5,21 @@
   transition: all 0.3s ease;
 }
 
-.index__new-products .wrapper .index__new-products__container .index__new-products__slide .index__slide__full-images--hidden .index__slide__full-images .product {
+.index__selling-products .wrapper .index__selling-products__container .index__selling-products__slide .index__slide__full-images--hidden .index__slide__full-images .product, .index__new-products .wrapper .index__new-products__container .index__new-products__slide .index__slide__full-images--hidden .index__slide__full-images .product {
   overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
 }
-.index__new-products .wrapper .index__new-products__container .index__new-products__slide .index__slide__full-images--hidden .index__slide__full-images .product:first-child, .index__new-products .wrapper .index__new-products__container .index__new-products__slide .index__slide__full-images--hidden .index__slide__full-images .product:nth-child(5) {
+.index__selling-products .wrapper .index__selling-products__container .index__selling-products__slide .index__slide__full-images--hidden .index__slide__full-images .product:first-child, .index__new-products .wrapper .index__new-products__container .index__new-products__slide .index__slide__full-images--hidden .index__slide__full-images .product:first-child, .index__selling-products .wrapper .index__selling-products__container .index__selling-products__slide .index__slide__full-images--hidden .index__slide__full-images .product:nth-child(5), .index__new-products .wrapper .index__new-products__container .index__new-products__slide .index__slide__full-images--hidden .index__slide__full-images .product:nth-child(5) {
   margin-left: 0;
   margin-right: 15px;
 }
-.index__new-products .wrapper .index__new-products__container .index__new-products__slide .index__slide__full-images--hidden .index__slide__full-images .product:nth-child(4), .index__new-products .wrapper .index__new-products__container .index__new-products__slide .index__slide__full-images--hidden .index__slide__full-images .product:last-child {
+.index__selling-products .wrapper .index__selling-products__container .index__selling-products__slide .index__slide__full-images--hidden .index__slide__full-images .product:nth-child(4), .index__new-products .wrapper .index__new-products__container .index__new-products__slide .index__slide__full-images--hidden .index__slide__full-images .product:nth-child(4), .index__selling-products .wrapper .index__selling-products__container .index__selling-products__slide .index__slide__full-images--hidden .index__slide__full-images .product:last-child, .index__new-products .wrapper .index__new-products__container .index__new-products__slide .index__slide__full-images--hidden .index__slide__full-images .product:last-child {
   margin-left: 15px;
   margin-right: 0;
 }
-.index__new-products .wrapper .index__new-products__container .index__new-products__slide .index__slide__full-images--hidden .index__slide__full-images .product:not(:first-child) {
+.index__selling-products .wrapper .index__selling-products__container .index__selling-products__slide .index__slide__full-images--hidden .index__slide__full-images .product:not(:first-child), .index__new-products .wrapper .index__new-products__container .index__new-products__slide .index__slide__full-images--hidden .index__slide__full-images .product:not(:first-child) {
   margin-left: 15px;
   margin-right: 15px;
 }
@@ -1275,10 +1275,15 @@ footer .footer__bottom .container .footer__bottom__right img {
   font-family: utm-caviar;
 }
 .product__price p:first-child {
+  line-height: 20px;
+  padding-top: 10px;
+  padding-right: 5px;
   color: #dfa949;
   font-size: 21px;
 }
 .product__price p:last-child {
+  line-height: 16px;
+  padding-left: 5px;
   color: #818181;
   font-size: 14px;
   text-decoration: line-through;
@@ -1929,6 +1934,62 @@ footer .footer__bottom .container .footer__bottom__right img {
 }
 .index__images__item .index__item__hover a:hover {
   border: 4px solid #dfa949;
+}
+.index__selling-products {
+  margin-top: 100px;
+  margin-bottom: 0;
+}
+.index__selling-products .wrapper .index__selling-products__container {
+  text-align: center;
+}
+.index__selling-products .wrapper .index__selling-products__container .index__selling-products__slide {
+  position: relative;
+  margin-top: 45px;
+  margin-bottom: 0;
+}
+.index__selling-products .wrapper .index__selling-products__container .index__selling-products__slide input {
+  position: absolute;
+  visibility: hidden;
+}
+.index__selling-products .wrapper .index__selling-products__container .index__selling-products__slide .index__slide__full-images--hidden {
+  overflow: hidden;
+}
+.index__selling-products .wrapper .index__selling-products__container .index__selling-products__slide .index__slide__full-images--hidden .index__slide__full-images {
+  display: flex;
+  width: 400%;
+  transform: translateX(0%);
+  transition: all 0.3s ease;
+}
+@media (min-width: 768px) {
+  .index__selling-products .wrapper .index__selling-products__container .index__selling-products__slide .index__slide__full-images--hidden .index__slide__full-images {
+    width: 200%;
+  }
+}
+.index__selling-products .wrapper .index__selling-products__container .index__selling-products__slide #index-selling-products-1:checked ~ .index__slide__full-images--hidden .index__slide__full-images {
+  transform: translateX(0%);
+}
+.index__selling-products .wrapper .index__selling-products__container .index__selling-products__slide #index-selling-products-2:checked ~ .index__slide__full-images--hidden .index__slide__full-images {
+  transform: translateX(-25%);
+}
+@media (min-width: 768px) {
+  .index__selling-products .wrapper .index__selling-products__container .index__selling-products__slide #index-selling-products-2:checked ~ .index__slide__full-images--hidden .index__slide__full-images {
+    transform: translateX(-50%);
+  }
+}
+.index__selling-products .wrapper .index__selling-products__container .index__selling-products__slide .index__slide__arrow--left {
+  position: absolute;
+  top: 50%;
+  left: -15px;
+}
+.index__selling-products .wrapper .index__selling-products__container .index__selling-products__slide .index__slide__arrow--right {
+  position: absolute;
+  top: 50%;
+  right: -15px;
+}
+.index__selling-products .wrapper .index__selling-products__container .index__selling-products__slide .index__slide__arrow--left i, .index__selling-products .wrapper .index__selling-products__container .index__selling-products__slide .index__slide__arrow--right i {
+  color: #dfa949;
+  font-size: 15px;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=main.css.map */

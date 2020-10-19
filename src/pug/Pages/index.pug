@@ -65,3 +65,22 @@ block content
     .index__images
       each link in indexImages
         +index-images-item(link)
+    .index__selling-products
+      .wrapper
+        .index__selling-products__container
+          .index__selling-products__title
+            +title-main('SẢN PHẨM BÁN CHẠY')
+          .index__selling-products__slide
+            input#index-selling-products-1(type='radio' name='index-selling-products', checked)
+            input#index-selling-products-2(type='radio' name='index-selling-products')
+            .index__slide__full-images--hidden
+              .index__slide__full-images#best_products
+                each item in indexSellingProduct
+                  +product(item.link, item.title, item.price1, item.price2, item.corner)(style=`background-color: ${item.color}; color: ${item.color}`)
+            .index__slide__arrow
+              .index__slide__arrow--left
+                label(for="index-selling-products-1")
+                  i.fa.fa-arrow-left
+              .index__slide__arrow--right
+                label(for="index-selling-products-2")
+                  i.fa.fa-arrow-right
