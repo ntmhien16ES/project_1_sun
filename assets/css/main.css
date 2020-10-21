@@ -640,6 +640,7 @@ header .header__menu .container .header__menu__list .header__list__menu > li:nth
   top: 30%;
   left: 0;
   right: 0;
+  z-index: 100;
   visibility: hidden;
   display: flex;
   justify-content: center;
@@ -2792,6 +2793,308 @@ footer .footer__bottom .container .footer__bottom__right img {
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 30px;
   grid-row-gap: 35px;
+}
+
+.blog-detail .blog-detail__title {
+  margin-top: 25px;
+  margin-bottom: 0;
+}
+.blog-detail .blog-detail__content {
+  margin-top: 30px;
+  margin-bottom: 0;
+}
+.blog-detail .blog-detail__content .wrapper .blog-detail__content__container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 30px;
+}
+.blog-detail .blog-detail__content .wrapper .blog-detail__content__container .blog-detail__content__left {
+  grid-column: 1/4;
+}
+.blog-detail .blog-detail__content .wrapper .blog-detail__content__container .blog-detail__content__left .blog-detail__left__newest .blog-detail__newest__items {
+  margin-top: 35px;
+  margin-bottom: 0;
+}
+.blog-detail .blog-detail__content .wrapper .blog-detail__content__container .blog-detail__content__left .blog-detail__left__newest .blog-detail__newest__items .blog-detail__newest__item {
+  display: flex;
+}
+.blog-detail .blog-detail__content .wrapper .blog-detail__content__container .blog-detail__content__left .blog-detail__left__newest .blog-detail__newest__items .blog-detail__newest__item:not(:first-child) {
+  margin-top: 22px;
+  margin-bottom: 0;
+}
+.blog-detail .blog-detail__content .wrapper .blog-detail__content__container .blog-detail__content__left .blog-detail__left__newest .blog-detail__newest__items .blog-detail__newest__item .blog-detail__item__left img {
+  width: 98px;
+}
+.blog-detail .blog-detail__content .wrapper .blog-detail__content__container .blog-detail__content__left .blog-detail__left__newest .blog-detail__newest__items .blog-detail__newest__item .blog-detail__item__right {
+  display: none;
+  margin-left: 15px;
+  margin-right: 0;
+}
+@media (min-width: 992px) {
+  .blog-detail .blog-detail__content .wrapper .blog-detail__content__container .blog-detail__content__left .blog-detail__left__newest .blog-detail__newest__items .blog-detail__newest__item .blog-detail__item__right {
+    display: block;
+  }
+}
+.blog-detail .blog-detail__content .wrapper .blog-detail__content__container .blog-detail__content__left .blog-detail__left__newest .blog-detail__newest__items .blog-detail__newest__item .blog-detail__item__right p {
+  color: #000000;
+  font-family: "Roboto";
+  font-size: 12px;
+  text-transform: uppercase;
+}
+.blog-detail .blog-detail__content .wrapper .blog-detail__content__container .blog-detail__content__left .blog-detail__left__newest .blog-detail__newest__items .blog-detail__newest__item .blog-detail__item__right i, .blog-detail .blog-detail__content .wrapper .blog-detail__content__container .blog-detail__content__left .blog-detail__left__newest .blog-detail__newest__items .blog-detail__newest__item .blog-detail__item__right span {
+  font-size: 13px;
+}
+.blog-detail .blog-detail__content .wrapper .blog-detail__content__container .blog-detail__content__left .blog-detail__left__newest .blog-detail__newest__items .blog-detail__newest__item .blog-detail__item__right i {
+  margin-top: 12px;
+  margin-bottom: 0;
+}
+.blog-detail .blog-detail__content .wrapper .blog-detail__content__container .blog-detail__content__left .blog-detail__left__newest .blog-detail__newest__items .blog-detail__newest__item .blog-detail__item__right span {
+  margin-left: 9px;
+  margin-right: 0;
+  font-family: roboto-light;
+}
+.blog-detail .blog-detail__content .wrapper .blog-detail__content__container .blog-detail__content__left .blog-detail__left__tag {
+  margin-top: 35px;
+  margin-bottom: 0;
+}
+.blog-detail .blog-detail__content .wrapper .blog-detail__content__container .blog-detail__content__left .blog-detail__left__tag ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  margin-bottom: 0;
+}
+.blog-detail .blog-detail__content .wrapper .blog-detail__content__container .blog-detail__content__left .blog-detail__left__tag ul li {
+  float: none;
+  margin-left: 0;
+  margin-right: 7px;
+  margin-top: 9px;
+  margin-bottom: 0;
+}
+.blog-detail .blog-detail__content .wrapper .blog-detail__content__container .blog-detail__content__left .blog-detail__left__tag ul li button {
+  height: 25px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 1px solid #e6e6e6;
+  border-radius: 5px;
+  background-color: transparent;
+  color: #818181;
+  font-family: "Roboto";
+  font-size: 12px;
+}
+.blog-detail .blog-detail__content .wrapper .blog-detail__content__container .blog-detail__content__left .blog-detail__left__tag ul li button:hover {
+  background-color: #f26522;
+  color: #ffffff;
+}
+.blog-detail .blog-detail__content .wrapper .blog-detail__content__container .blog-detail__content__left .blog-detail__left__video {
+  margin-top: 58px;
+  margin-bottom: 0;
+}
+.blog-detail .blog-detail__content .wrapper .blog-detail__content__container .blog-detail__content__left .blog-detail__left__video .blog-detail__video__item {
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+.blog-detail .blog-detail__content .wrapper .blog-detail__content__container .blog-detail__content__left .blog-detail__left__video .blog-detail__video__item img {
+  width: 100%;
+}
+.blog-detail .blog-detail__content .wrapper .blog-detail__content__container .blog-detail__content__left .blog-detail__left__video .blog-detail__video__item i {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 105px;
+  margin-right: 115px;
+  margin-top: 70px;
+  margin-bottom: 70px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+}
+.blog-detail .blog-detail__content .wrapper .blog-detail__content__container .blog-detail__content__right {
+  grid-column: 4/13;
+}
+.blog-detail .blog-detail__content .wrapper .blog-detail__content__container .blog-detail__content__right .blog-item__image .blog-item__image__hover {
+  display: none;
+}
+.blog-detail .blog-detail__content .wrapper .blog-detail__content__container .blog-detail__content__right .blog-item__title {
+  margin-top: 43px;
+  margin-bottom: 0;
+}
+.blog-detail .blog-detail__content .wrapper .blog-detail__content__container .blog-detail__content__right .blog-item__title a {
+  font-size: 30px;
+}
+.blog-detail .blog-detail__content .wrapper .blog-detail__content__container .blog-detail__content__right .blog-item__time {
+  margin-top: 25px;
+  margin-bottom: 0;
+}
+.blog-detail .blog-detail__content .wrapper .blog-detail__content__container .blog-detail__content__right .blog-item__time p {
+  font-size: 21px;
+}
+.blog-detail .blog-detail__content .wrapper .blog-detail__content__container .blog-detail__content__right .blog-item__content {
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+.blog-detail .blog-detail__content .wrapper .blog-detail__content__container .blog-detail__content__right .blog-item__content p {
+  font-size: 19px;
+  font-style: italic;
+  line-height: 1.6;
+}
+.blog-detail .blog-detail__content .wrapper .blog-detail__content__container .blog-detail__content__right .blog-detail__right__opinion {
+  margin-top: 55px;
+  margin-bottom: 0;
+}
+.blog-detail .blog-detail__content .wrapper .blog-detail__content__container .blog-detail__content__right .blog-detail__right__opinion .blog-detail__opinion__title p {
+  color: #000000;
+  font-size: 18px;
+  font-style: italic;
+}
+.blog-detail .blog-detail__content .wrapper .blog-detail__content__container .blog-detail__content__right .blog-detail__right__opinion .blog-detail__opinion__form {
+  margin-top: 25px;
+  margin-bottom: 0;
+}
+.blog-detail .blog-detail__content .wrapper .blog-detail__content__container .blog-detail__content__right .blog-detail__right__opinion .blog-detail__opinion__form form .input-text, .blog-detail .blog-detail__content .wrapper .blog-detail__content__container .blog-detail__content__right .blog-detail__right__opinion .blog-detail__opinion__form form .textarea-text {
+  color: #000000;
+  font-size: 14px;
+  font-style: italic;
+}
+.blog-detail .blog-detail__content .wrapper .blog-detail__content__container .blog-detail__content__right .blog-detail__right__opinion .blog-detail__opinion__form form .input-text label, .blog-detail .blog-detail__content .wrapper .blog-detail__content__container .blog-detail__content__right .blog-detail__right__opinion .blog-detail__opinion__form form .textarea-text label {
+  flex-basis: 8%;
+}
+.blog-detail .blog-detail__content .wrapper .blog-detail__content__container .blog-detail__content__right .blog-detail__right__opinion .blog-detail__opinion__form form .input-text label span, .blog-detail .blog-detail__content .wrapper .blog-detail__content__container .blog-detail__content__right .blog-detail__right__opinion .blog-detail__opinion__form form .textarea-text label span {
+  color: red;
+}
+.blog-detail .blog-detail__content .wrapper .blog-detail__content__container .blog-detail__content__right .blog-detail__right__opinion .blog-detail__opinion__form form .input-text-error, .blog-detail .blog-detail__content .wrapper .blog-detail__content__container .blog-detail__content__right .blog-detail__right__opinion .blog-detail__opinion__form form .textarea-text-error {
+  width: 100%;
+}
+.blog-detail .blog-detail__content .wrapper .blog-detail__content__container .blog-detail__content__right .blog-detail__right__opinion .blog-detail__opinion__form form .input-text input, .blog-detail .blog-detail__content .wrapper .blog-detail__content__container .blog-detail__content__right .blog-detail__right__opinion .blog-detail__opinion__form form .input-text textarea, .blog-detail .blog-detail__content .wrapper .blog-detail__content__container .blog-detail__content__right .blog-detail__right__opinion .blog-detail__opinion__form form .textarea-text input, .blog-detail .blog-detail__content .wrapper .blog-detail__content__container .blog-detail__content__right .blog-detail__right__opinion .blog-detail__opinion__form form .textarea-text textarea {
+  width: 100%;
+  flex-grow: 1;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 1px solid #e6e6e6;
+}
+.blog-detail .blog-detail__content .wrapper .blog-detail__content__container .blog-detail__content__right .blog-detail__right__opinion .blog-detail__opinion__form form .input-text:nth-of-type(2) {
+  margin-top: 35px;
+  margin-bottom: 0;
+}
+.blog-detail .blog-detail__content .wrapper .blog-detail__content__container .blog-detail__content__right .blog-detail__right__opinion .blog-detail__opinion__form form .input-text input {
+  height: 40px;
+}
+.blog-detail .blog-detail__content .wrapper .blog-detail__content__container .blog-detail__content__right .blog-detail__right__opinion .blog-detail__opinion__form form .textarea-text {
+  margin-top: 35px;
+  margin-bottom: 0;
+}
+.blog-detail .blog-detail__content .wrapper .blog-detail__content__container .blog-detail__content__right .blog-detail__right__opinion .blog-detail__opinion__form form .textarea-text textarea {
+  height: 273px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.blog-detail .blog-detail__content .wrapper .blog-detail__content__container .blog-detail__content__right .blog-detail__right__opinion .blog-detail__opinion__form form > button {
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 15px;
+  padding-bottom: 10px;
+  border-radius: 10px;
+  margin-top: 40px;
+  margin-bottom: 0;
+  margin-left: 8%;
+  margin-right: 0;
+  font-family: "Times New Roman";
+  font-size: 16px;
+}
+.blog-detail .blog-detail__content .wrapper .blog-detail__content__container .blog-detail__content__right .blog-detail__right__opinion .blog-detail__opinion__form form > button:hover {
+  background-color: #dfa949;
+}
+.blog-detail .blog-detail__content .wrapper .blog-detail__content__container .blog-detail__content__right .blog-detail__right__comment {
+  margin-top: 60px;
+  margin-bottom: 0;
+}
+.blog-detail .blog-detail__content .wrapper .blog-detail__content__container .blog-detail__content__right .blog-detail__right__comment .blog-detail__comment__title p {
+  color: #000000;
+  font-size: 18px;
+}
+.blog-detail .blog-detail__content .wrapper .blog-detail__content__container .blog-detail__content__right .blog-detail__right__comment .blog-detail__comment__item {
+  margin-top: 25px;
+  margin-bottom: 0;
+}
+.blog-detail .blog-detail__content .wrapper .blog-detail__content__container .blog-detail__content__right .blog-detail__right__comment .blog-detail__comment__item .comment:not(:first-child) {
+  margin-top: 40px;
+  margin-bottom: 0;
+}
+.blog-detail .blog-detail__content .wrapper .blog-detail__content__container .blog-detail__content__right .blog-detail__right__comment .blog-detail__comment__item .comment .comment__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 45px;
+  border-radius: 5px;
+  background-color: #eeeeee;
+}
+.blog-detail .blog-detail__content .wrapper .blog-detail__content__container .blog-detail__content__right .blog-detail__right__comment .blog-detail__comment__item .comment .comment__title p {
+  font-size: 14px;
+  font-style: italic;
+}
+.blog-detail .blog-detail__content .wrapper .blog-detail__content__container .blog-detail__content__right .blog-detail__right__comment .blog-detail__comment__item .comment .comment__title .comment__title__left {
+  display: flex;
+  margin-left: 22px;
+  margin-right: 0;
+}
+.blog-detail .blog-detail__content .wrapper .blog-detail__content__container .blog-detail__content__right .blog-detail__right__comment .blog-detail__comment__item .comment .comment__title .comment__title__left p:first-child {
+  padding-left: 0;
+  padding-right: 35px;
+  border-right: 1px solid #818181;
+}
+.blog-detail .blog-detail__content .wrapper .blog-detail__content__container .blog-detail__content__right .blog-detail__right__comment .blog-detail__comment__item .comment .comment__title .comment__title__left p:last-child {
+  padding-left: 15px;
+  padding-right: 0;
+}
+.blog-detail .blog-detail__content .wrapper .blog-detail__content__container .blog-detail__content__right .blog-detail__right__comment .blog-detail__comment__item .comment .comment__title .comment__title__right {
+  margin-left: 0;
+  margin-right: 32px;
+}
+.blog-detail .blog-detail__content .wrapper .blog-detail__content__container .blog-detail__content__right .blog-detail__right__comment .blog-detail__comment__item .comment .comment__title .comment__title__right p {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.blog-detail .blog-detail__content .wrapper .blog-detail__content__container .blog-detail__content__right .blog-detail__right__comment .blog-detail__comment__item .comment .comment__content {
+  margin-left: 22px;
+  margin-right: 0;
+  margin-top: 15px;
+  margin-bottom: 0;
+}
+.blog-detail .blog-detail__content .wrapper .blog-detail__content__container .blog-detail__content__right .blog-detail__right__comment .blog-detail__comment__item .comment .comment__content p {
+  font-size: 14px;
+}
+.blog-detail .blog-detail__content .wrapper .blog-detail__content__container .blog-detail__content__right .blog-detail__right__comment .blog-detail__comment__page {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 35px;
+  margin-bottom: 125px;
+}
+.blog-detail .blog-detail__content .wrapper .blog-detail__content__container .blog-detail__content__right .blog-detail__right__comment .blog-detail__comment__page a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 37px;
+  height: 37px;
+  border: 1px solid #e6e6e6;
+  margin-left: 14px;
+  margin-right: 0;
+  color: #000000;
+  font-size: 14px;
+}
+.blog-detail .blog-detail__content .wrapper .blog-detail__content__container .blog-detail__content__right .blog-detail__right__comment .blog-detail__comment__page a:first-child, .blog-detail .blog-detail__content .wrapper .blog-detail__content__container .blog-detail__content__right .blog-detail__right__comment .blog-detail__comment__page a:last-child {
+  color: #ffffff;
+  background-color: #000000;
+}
+.blog-detail .blog-detail__content .wrapper .blog-detail__content__container .blog-detail__content__right .blog-detail__right__comment .blog-detail__comment__page .active {
+  color: #ffffff;
+  background-color: #818181;
 }
 
 /*# sourceMappingURL=main.css.map */

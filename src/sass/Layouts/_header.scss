@@ -453,6 +453,7 @@ header {
                                 top: 30%;
                                 left: 0;
                                 right: 0;
+                                z-index: $z-index-header-menu-hover;
                                 @include xl {
                                     top: 100%;
                                     left: -35px;
