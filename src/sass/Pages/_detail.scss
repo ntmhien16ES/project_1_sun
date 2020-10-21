@@ -1,27 +1,4 @@
 .detail {
-    &__link {
-      @include mt-mb(30px, 0);
-      .wrapper {
-        ul {
-          display: flex;
-  
-          li {
-            float: none;
-  
-            &:not(:last-child) {
-              &::after {
-                content: '/';
-                @include ml-mr(4px, 4px);
-              } 
-            }
-            a {
-              color: $color-primary;
-              font-size: $font-size-detail-link;
-            }
-          }  
-        }
-      }
-    }
     &__main {
       @include mt-mb(35px, 0);
       

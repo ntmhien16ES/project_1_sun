@@ -75,7 +75,7 @@ mixin product(link, title, price, old, text)
       a(href='./error.html')
         i.fa.fa-signal
         p So sánh
-      a(href='./error.html')
+      a(href='./detail.html')
         i.fa.fa-compress
 
 mixin product-list(link, title, price, content)
@@ -134,9 +134,13 @@ mixin link(pageLink)
   .link
     .wrapper
       ul
-        each item in pageLink
-          li
-            a(href=item.link)= item.name
+        each item,index in pageLink
+          if index == pageLink.length-1
+            li
+              a(href=item.link, class="active")= item.name
+          else
+            li
+              a(href=item.link)= item.name
 
 mixin products-link
   +link(detailLink)

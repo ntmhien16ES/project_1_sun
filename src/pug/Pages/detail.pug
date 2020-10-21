@@ -5,12 +5,7 @@ block title
 
 block content
   .detail
-    .detail__link
-      .wrapper
-        ul
-          each item in detailLink
-            li
-              a(href=item.link)= item.name
+    +products-link
     .detail__main
       .wrapper
         .detail__main__container

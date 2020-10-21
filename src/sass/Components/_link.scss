@@ -15,8 +15,11 @@
                 }
                 }
                 a {
-                color: $color-primary;
-                font-size: $font-size-detail-link;
+                    color: $color-primary;
+                    font-size: $font-size-detail-link;
+                }
+                .active {
+                    color: $color-hover;
                 }
             }
         }
