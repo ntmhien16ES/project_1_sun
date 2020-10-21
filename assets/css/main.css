@@ -2779,4 +2779,19 @@ footer .footer__bottom .container .footer__bottom__right img {
   font-size: 14px;
 }
 
+.blog .blog__title {
+  margin-top: 25px;
+  margin-bottom: 0;
+}
+.blog .blog__list {
+  margin-top: 30px;
+  margin-bottom: 75px;
+}
+.blog .blog__list .wrapper .blog__list__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+  grid-row-gap: 35px;
+}
+
 /*# sourceMappingURL=main.css.map */
