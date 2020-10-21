@@ -1380,7 +1380,7 @@ footer .footer__bottom .container .footer__bottom__right img {
 .product-list .product-list__left img {
   margin-top: 25px;
   margin-bottom: 10px;
-  height: 290px;
+  width: 100px;
 }
 .product-list .product-list__right {
   grid-column: 4/9;
@@ -2612,6 +2612,25 @@ footer .footer__bottom .container .footer__bottom__right img {
 .products__right__items--grid .product {
   margin-top: 0;
   margin-bottom: 25px;
+}
+
+.products__right__items--list {
+  margin-top: 27px;
+  margin-bottom: 0;
+}
+.products__right__items--list .product-list {
+  position: relative;
+}
+.products__right__items--list .product-list:not(:first-child) {
+  margin-top: 38px;
+  margin-bottom: 0;
+}
+.products__right__items--list .product-list:not(:first-child)::before {
+  position: absolute;
+  content: "";
+  top: -6%;
+  width: 100%;
+  border: 1px solid #e6e6e6;
 }
 
 /*# sourceMappingURL=main.css.map */
