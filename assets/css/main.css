@@ -2745,4 +2745,38 @@ footer .footer__bottom .container .footer__bottom__right img {
   background-color: #030102 !important;
 }
 
+.intro__title {
+  margin-top: 25px;
+  margin-bottom: 0;
+}
+.intro__content {
+  margin-top: 30px;
+  margin-bottom: 100px;
+}
+.intro__content__container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 30px;
+}
+.intro__content__container .intro__content__left {
+  grid-column: 1/6;
+}
+.intro__content__container .intro__content__left img {
+  width: 100%;
+}
+.intro__content__container .intro__content__right {
+  grid-column: 6/12;
+}
+.intro__content__container .intro__content__right p:first-child {
+  color: #000000;
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+.intro__content__container .intro__content__right p:last-child {
+  margin-top: 15px;
+  margin-bottom: 0;
+  font-size: 14px;
+}
+
 /*# sourceMappingURL=main.css.map */
