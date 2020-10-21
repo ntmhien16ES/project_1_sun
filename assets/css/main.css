@@ -3097,4 +3097,73 @@ footer .footer__bottom .container .footer__bottom__right img {
   background-color: #818181;
 }
 
+.login .login__title {
+  margin-top: 25px;
+  margin-bottom: 0;
+}
+.login .login__title .login__title__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.login .login__content {
+  margin-top: 30px;
+  margin-bottom: 125px;
+}
+.login .login__content .login__content__container {
+  padding-left: 55px;
+  padding-right: 67px;
+  padding-top: 45px;
+  padding-bottom: 45px;
+  border: 1px solid #e6e6e6;
+  color: #000000;
+  font-size: 14px;
+}
+.login .login__content .login__content__container .login__content__title p:first-child {
+  font-size: 18px;
+}
+.login .login__content .login__content__container .login__content__title p:last-child {
+  margin-top: 15px;
+  margin-bottom: 0;
+  font-family: "Open Sans";
+}
+.login .login__content .login__content__container .login__content__form form > .input-text {
+  margin-top: 45px;
+  margin-bottom: 0;
+}
+.login .login__content .login__content__container .login__content__form form > .input-text + .input-text {
+  margin-top: 30px;
+  margin-bottom: 0;
+}
+.login .login__content .login__content__container .login__content__form form .input-text label {
+  flex-basis: 8%;
+}
+.login .login__content .login__content__container .login__content__form form .input-text label span {
+  margin-left: 5px;
+  margin-right: 0;
+}
+.login .login__content .login__content__container .login__content__form form .input-text-error {
+  width: 100%;
+}
+.login .login__content .login__content__container .login__content__form form .input-text input {
+  flex-grow: 1;
+  height: 31px;
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 1px solid #e7e7e7;
+}
+.login .login__content .login__content__container .login__content__form form .input-checkbox {
+  margin-top: 20px;
+  margin-bottom: 0;
+  margin-left: 8%;
+  margin-right: 0;
+}
+.login .login__content .login__content__container .login__content__form form .button-small {
+  margin-left: 8%;
+  margin-right: 0;
+  margin-top: 25px;
+  margin-bottom: 0;
+}
+
 /*# sourceMappingURL=main.css.map */
