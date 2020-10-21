@@ -43,3 +43,13 @@
         }
     }
 }
+.btn-add-to-cart {
+    width: 122px;
+    height: 29px;
+    letter-spacing: 1px;
+    @extend %button-small;
+
+    &:hover {
+    background-color: $color-hover;
+    }
+}

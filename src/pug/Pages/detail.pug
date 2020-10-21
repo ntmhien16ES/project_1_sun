@@ -1,0 +1,135 @@
+extends ../Layouts/default-layout
+
+block title
+  title Rượu Vang Đỏ
+
+block content
+  .detail
+    .detail__link
+      .wrapper
+        ul
+          each item in detailLink
+            li
+              a(href=item.link)= item.name
+    .detail__main
+      .wrapper
+        .detail__main__container
+          .detail__main__left-middle
+            .detail__main__left
+              - var n = 1;
+              while n < 3
+                input(id=`detail-slide-${n++}` type='radio' name='detail-slide')
+              .detail__slide__full-images--hidden
+                .detail__slide__full-images
+                  each item in detailMainLeft
+                    .detail__slide__image
+                      img(src=item)
+              .detail__slide__arrow
+                .detail__slide__arrow--up
+                  label(for="detail-slide-1")
+                    i.fa.fa-arrow-up
+                .detail__slide__arrow--down
+                  label(for="detail-slide-2")
+                    i.fa.fa-arrow-down
+            .detail__main__middle
+              img(src='./assets/images/detail-main-middle.png')
+          .detail__main__right
+            .detail__right__title
+              +title-product('RƯỢU NHO NĂM 1987', true)
+            .detail__right__price
+              +price-product('330.000')
+            .detail__right__review
+              ul
+                each item in detailMainRightReview
+                  li
+                    i(class=item) 
+              p 1 Review(S) | Add Your Review
+            form(method="post")
+                .detail__right__color
+                    +detail-title('MÀU SẮC')
+                    input(type="radio", name="color", id="color-yellow", checked)
+                    label(for="color-yellow")
+                    input(type="radio" name="color", id="color-black")
+                    label(for="color-black")
+                    input(type="radio" name="color", id="color-red")
+                    label(for="color-red")
+                .detail__right__size
+                    +detail-title('SỐ LƯỢNG')
+                    .detail__size__container
+                        select
+                            each item in detailMainRightSize
+                                option(value=item)= item
+                        i.fa.fa-caret-down
+                .detail__right__quantity
+                    +detail-title('SỐ LƯỢNG')
+                    .detail__quantity__wrapper
+                        .detail__quantity__detail
+                            input(type="text", value="1")
+                            i.fa.fa-minus
+                            i.fa.fa-plus
+                        button(type="submit", class="btn-add-to-cart") ADD TO CARD
+            .detail__right__compare
+              ul
+                each item in detailMainRightCompare
+                  li
+                    a(href='#')
+                      i(class=item.class)
+                      p= item.text
+            .detail__right__description
+              +detail-title('MÔ TẢ')
+              p Một hợp chất có trong rượu vang được gọi là resveratro có khả năng làm tăng tối đa tuổi thọ. Resveratro còn có khả năng ngăn chặn mật độ ôxy hoá của protein béo.
+            .detail__right__social
+              .detail__social__fb
+                button
+                  i.fa.fa-facebook-official 
+                  span Like 
+                p 0 
+              .detail__social__tw
+                button
+                  i.fab.fa-twitter
+                  span Tweet
+                p 0 
+              .detail__social__gg
+                button
+                  i.fab.fa-google-plus-g
+                p 0 
+              .detail__social__in
+                button
+                  i.fab.fa-linkedin
+                  span Share 
+              .detail__social__pi
+                button
+                  i.fab.fa-pinterest-square
+    .detail__content
+      .wrapper
+        .detail__content__container
+          .detail__content__left
+            .detail__content__title
+              +detail-title('ĐẶC ĐIỂM NỔI BẬT',true)
+              +detail-title('THÔNG TIN SẢN PHẨM')
+              +detail-title('ĐÁNH GIÁ')
+            .detail__content__text
+              p Đừng nghĩ rằng chỉ vì đôi chân to mà bạn không thể mặc được món đồ nào khác ngoài quần dài. Sau đây là những item vừa trendy lại vừa có tác dụng rất hiệu quả trong việc điều chỉnh đôi chân to của bạn. Mùa hè là mùa của những bộ cánh thoải mái, thoáng mát và hẳn cô gái nào cũng muốn khoe chân tối đa. Tuy nhiên, điều này lại không hề dễ dàng đối với những cô nàng sở hữu đôi chân to.Đừng nghĩ rằng chỉ vì đôi chân to mà bạn không thể mặc được món đồ nào khác ngoài quần dài. Sau đây là những item vừa trendy lại vừa có tác dụng rất hiệu quả trong việc điều chỉnh đôi chân to của bạn.
+              P Mùa hè là mùa của những bộ cánh thoải mái, thoáng mát và hẳn cô gái nào cũng muốn khoe chân tối đa. Tuy nhiên, điều này lại không hề dễ dàng đối với những cô nàng sở hữu đôi chân to. Vậy diện đồ thế nào để vừa tạo cảm giác nhẹ nhàng nhưng lại khéo léo giấu được nhược điểm ấy? Sau đây, chúng tôi xin đưa ra gợi ý về loạt item mà các cô nàng chân to nên gắn bó trong mùa hè này.
+          .detail__content__right
+            img(src='./assets/images/detail-content-right.png')
+            p RƯỢU NHO
+    .detail__related-products
+      .wrapper
+        .detail__related-products__container
+          .detail__related-products__title
+            +title-main('SẢN PHẨM LIÊN QUAN')
+          .products__slide
+            input#detail-related-products-1(type='radio' name='detail-related-products', checked)
+            input#detail-related-products-2(type='radio' name='detail-related-products')
+            .products__slide__full-images--hidden
+              .products__slide__full-images
+                each item in indexSellingProduct
+                  +product(item.link, item.title, item.price1, item.price2, item.corner)(style=`background-color: ${item.color}; color: ${item.color}`)
+            .products__slide__arrow
+              .products__slide__arrow--left
+                label(for="detail-related-products-1")
+                  i.fa.fa-arrow-left
+              .products__slide__arrow--right
+                label(for="detail-related-products-2")
+                  i.fa.fa-arrow-right

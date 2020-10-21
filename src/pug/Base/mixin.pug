@@ -122,9 +122,13 @@ mixin blog-item(link, text1, text2, text3, readMore)
       .blog-item__read-more
         a(href='./blog-detail.html') Read more
 
-mixin detail-title(text)
-  .detail-title
-    p= text
+mixin detail-title(text, active=false)
+  if active==true
+    .detail-title.active
+      p= text
+  else
+    .detail-title
+      p= text
 
 mixin link(pageLink)
   .link

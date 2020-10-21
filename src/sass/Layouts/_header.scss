@@ -24,7 +24,7 @@ header {
                                 content: "-";
                             }
                             a {
-                                color: $color-header-top;
+                                // color: $color-header-top;
                                 position: relative;
                                 @include transition;
                                 
@@ -100,21 +100,40 @@ header {
         .header__top--relative {
             position: fixed;
             width: 100%;
-            background-color: $color-primary;
-    
-            .header__top__left {
-                &:hover ul {
-                    @include lg-max {
-                        background-color: $color-white;
+            background-color: white;
+            .container {
+                .header__top__left {
+                    &:hover ul {
+                        @include lg-max {
+                            background-color: $color-white;
+                        }
+                    }
+                    ul {
+                        li {
+                            &:not(:last-child)::after {
+                                color: black;
+                            }
+                            a {
+                                color: black;
+                            }
+                        }
+                    }
+                    
+                }
+                .header__top__right {
+                    input {
+                        color: black;
+                        border-left: 1px solid black;
+                        &::placeholder {
+                            color: black;
+                        }
                     }
                 }
-                ul li a {
+                i {
                     color: $color-black;
                 }
             }
-            i {
-                color: $color-black;
-            }
+            
         }
         .header__top--absolute {
             position: absolute;
@@ -129,11 +148,11 @@ header {
                     }
                 }
                 ul li a {
-                    color: $color-primary;
+                    color: $color-header-top;
                 }
             }
             i {
-                color: $color-primary;
+                color: $color-header-top;
             }
         }
         .header__top__left {
@@ -545,5 +564,8 @@ header {
             }
             
         }
+    }
+    .pt {
+        padding-top: 34px;
     }
 }

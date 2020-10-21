@@ -1,0 +1,46 @@
+.products__slide {
+    position: relative;
+    @include mt-mb(45px, 0);
+    input {
+        position: absolute;
+        visibility: hidden;
+    }
+    .products__slide__full-images--hidden {
+        overflow: hidden;
+
+        .products__slide__full-images {
+            display: flex;
+            width:  400%;
+            @include md {
+                width: 200%;
+            }
+            
+
+            transform: translateX(0%);
+            @include transition;
+            .product {
+                @extend %product-slide
+            }
+        }
+    }
+    
+    .products__slide__arrow {
+        &--left {
+            position: absolute;
+            top: 50%;
+            left: 0;
+        }
+        &--right {
+            position: absolute;
+            top: 50%;
+            right: 0;
+        }
+        &--left, &--right {
+            i {
+                color: $color-hover;
+                font-size: $font-size-slide-arrow;
+                cursor: pointer;
+            }
+        } 
+    } 
+}
